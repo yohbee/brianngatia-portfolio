@@ -40,7 +40,7 @@ export const projects: Project[] = [
     stack: ["React 19", "TypeScript", "TanStack Start", "Vite", "Tailwind CSS", "Framer Motion", "Cloudflare Workers"],
     metrics: [
       { label: "Featured projects", value: "3" },
-      { label: "Build time", value: "<5s" },
+      { label: "Build time", value: ">3 weeks" },
       { label: "Deployment", value: "Edge" },
     ],
     year: "2026",
@@ -266,12 +266,10 @@ export type Certificate = {
 };
 
 export const certificates: Certificate[] = [
-  { title: "AWS Certified Solutions Architect — Associate", issuer: "Amazon Web Services", year: "2024" },
-  { title: "Google Cloud Professional Data Engineer", issuer: "Google Cloud", year: "2024" },
-  { title: "Databricks Certified Data Engineer Associate", issuer: "Databricks", year: "2024" },
-  { title: "Deep Learning Specialization", issuer: "DeepLearning.AI", year: "2023" },
-  { title: "Machine Learning Engineering for Production (MLOps)", issuer: "DeepLearning.AI", year: "2023" },
-  { title: "Meta Front-End Developer Professional", issuer: "Meta / Coursera", year: "2022" },
+  { title: "Data Analysis", issuer: "African Leadership Group", year: "2025" },
+  { title: "Python", issuer:"African Leadership Group", year: "2025" },
+  { title: "Machine Learning", issuer: "African leadership Group", year: "2026" },
+  { title: "Data Science", issuer: "African Leadership Group", year: "2026" },
 ];
 
 export type Experience = {
@@ -283,47 +281,30 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Senior Full-Stack & AI Engineer",
+    role: "Full-Stack & AI Engineer",
     org: "Independent / Consulting",
-    period: "2023 — Present",
+    period: "2025 — Present",
     bullets: [
-      "Designed and shipped multi-tenant SaaS platforms across property tech and commerce.",
-      "Built RAG-based internal assistants reducing support load by 40%.",
-      "Architected production data pipelines processing 100M+ records daily.",
+      
     ],
   },
-  {
-    role: "Data & Backend Engineer",
-    org: "Fintech Startup",
-    period: "2021 — 2023",
-    bullets: [
-      "Owned the ETL and warehouse stack on Airflow + dbt + Snowflake.",
-      "Built fraud-detection feature pipelines feeding XGBoost models.",
-      "Migrated legacy Postgres workloads, cutting query latency by 60%.",
-    ],
-  },
-  {
-    role: "Full-Stack Developer",
-    org: "Agency / Client Work",
-    period: "2019 — 2021",
-    bullets: [
-      "Delivered 15+ production web apps in React, Next.js and Node.js.",
-      "Set up CI/CD on GitHub Actions with containerized deployments.",
-    ],
-  },
+ {
+  role: "Software Development Intern",
+  org: "Farmsky Ventures",
+  period: "2026 — Present",
+  bullets: [
+    "Designed and developed a Customer Relationship Management (CRM) system to streamline customer and business operations.",
+    "Created comprehensive system documentation, including user guides and technical documentation for future maintenance.",
+    "Tested, debugged, and maintained the CRM system to ensure reliability, performance, and a seamless user experience.",
+  ],
+},
 ];
 
 export const testimonials = [
   {
     quote:
-      "Brian shipped our data platform faster than any team we had hired before. He thinks in systems and writes documentation that actually gets read.",
-    name: "A. Mwangi",
-    role: "CTO, Fintech Startup",
-  },
-  {
-    quote:
-      "Rare combination of frontend taste and serious data chops. Our RAG assistant launched in six weeks and is now used daily across the company.",
-    name: "L. Otieno",
-    role: "Head of Product, SaaS Co.",
+      "Brian did an amazing job designing and developing our CRM system. He demonstrated professionalism throughout the project and produced clear, well-structured documentation that made the system easy to understand and maintain.",
+    name: "Bonface Nyalwal",
+    role: "CEO, Farmsky Ventures",
   },
 ];

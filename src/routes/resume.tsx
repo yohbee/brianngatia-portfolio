@@ -4,38 +4,12 @@ import { PageShell, SectionHeading } from "@/components/page-shell";
 import { experience, certificates } from "@/lib/portfolio-data";
 
 function downloadResume() {
-  const md = `# Brian Ngatia
-Full-Stack · Data · AI Engineer — Nairobi, Kenya
-
-## Contact
-- Email: jamesngatia354@gmail.com
-- GitHub: github.com/yohbee
-- LinkedIn: linkedin.com/in/jngatia
-- Portfolio: ngatia.dev
-
-## Experience
-${experience
-  .map(
-    (e) =>
-      `\n### ${e.role} — ${e.org}\n_${e.period}_\n${e.bullets.map((b) => `- ${b}`).join("\n")}`,
-  )
-  .join("\n")}
-
-## Certifications
-${certificates.map((c) => `- ${c.title} — ${c.issuer} (${c.year})`).join("\n")}
-
-## Education
-- BSc, Computer Science — University, Kenya (2017 — 2021)
-`;
-  const blob = new Blob([md], { type: "text/markdown" });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url;
-  a.download = "brian-ngatia-resume.md";
+  a.href = "/Resume.pdf"; // File inside the public folder
+  a.download = "Brian-Ngatia-Resume.pdf";
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
 }
 
 export const Route = createFileRoute("/resume")({

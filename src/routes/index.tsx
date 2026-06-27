@@ -144,9 +144,9 @@ function Index() {
       <section className="max-w-6xl mx-auto px-6 mb-28">
         <div className="grid grid-cols-2 md:grid-cols-4 border border-border divide-x divide-y md:divide-y-0 divide-border rounded-2xl overflow-hidden bg-card/30">
           {[
-            ["YEARS_BUILDING", "5+"],
-            ["PROJECTS_SHIPPED", "30+"],
-            ["PIPELINES_DEPLOYED", "12"],
+            ["YEARS_BUILDING", "1+"],
+            ["PROJECTS_SHIPPED", "5+"],
+            ["PIPELINES_DEPLOYED", "4"],
             ["UPTIME_AVG", "99.9%"],
           ].map(([k, v]) => (
             <div key={k} className="p-6 md:p-8">
@@ -218,7 +218,7 @@ function Index() {
             Got a hard problem?
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Open to senior full-stack, data and AI engineering roles, plus selective
+            Open to Full-stack, data and AI engineering roles, plus selective
             consulting engagements.
           </p>
           <Link

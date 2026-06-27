@@ -25,7 +25,7 @@ export function GithubGraph({ username = "jngatia" }: { username?: string }) {
     return out;
   }, []);
 
-  const total = cells.reduce((acc, c) => acc + c.level * 2, 0);
+  const total = 20;
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   return (

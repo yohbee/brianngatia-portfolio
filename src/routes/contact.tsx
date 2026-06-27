@@ -24,7 +24,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Brian Ngatia" },
       {
         property: "og:description",
-        content: "Email, LinkedIn, GitHub, WhatsApp and Calendly.",
+        content: "Email, LinkedIn, GitHub, WhatsApp and Google calendar.",
       },
     ],
   }),
@@ -41,8 +41,8 @@ const channels = [
   },
   { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/jngatia", href: "https://linkedin.com" },
   { icon: Github, label: "GitHub", value: "github.com/yohbee", href: "https://github.com/yohbee/brianngatia-portfolio" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+254 ••• ••• •••", href: "#" },
-  { icon: Calendar, label: "Calendly", value: "cal.com/jngatia/intro", href: "#" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+254 748841173", href: "https://wa.me/254748841173" },
+  { icon: Calendar, label: "Google Calendar", value: "calendar.google.com/calendar/u/0/r", href: "https://calendar.app.google/cyS44pUByMGhUmE17" },
 ];
 
 function ContactPage() {

@@ -49,7 +49,6 @@ const skills: { cat: string; items: Skill[] }[] = [
     items: [
       { name: "Airflow", level: 92 },
       { name: "Spark / PySpark", level: 88 },
-      { name: "Kafka", level: 82 },
       { name: "dbt", level: 90 },
       { name: "Snowflake", level: 88 },
       { name: "BigQuery", level: 82 },
@@ -59,7 +58,6 @@ const skills: { cat: string; items: Skill[] }[] = [
     cat: "Machine Learning",
     items: [
       { name: "Scikit-Learn", level: 92 },
-      { name: "XGBoost", level: 90 },
       { name: "PyTorch", level: 80 },
       { name: "LLMs / RAG", level: 92 },
       { name: "Vector DBs", level: 88 },
@@ -79,7 +77,7 @@ const skills: { cat: string; items: Skill[] }[] = [
   {
     cat: "Cloud",
     items: [
-      { name: "AWS", level: 90 },
+      { name: "AWS", level: 70 },
       { name: "Google Cloud", level: 85 },
       { name: "Cloudflare", level: 88 },
       { name: "Vercel", level: 92 },
@@ -131,7 +129,7 @@ function AboutPage() {
               load, and ship things that users actually rely on.
             </p>
             <p className="text-foreground">
-              Interested in fintech, healthtech, real estate technology, and AI-native
+              Interested in fintech, ecommerce technology and AI-native
               tooling.
             </p>
           </div>
