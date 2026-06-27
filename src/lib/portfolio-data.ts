@@ -188,6 +188,78 @@ export const projects: Project[] = [
       flow: "User logs in → adds transactions → Firestore stores data → dashboard visualizes spending → future forecasting/AI layer explains behavior",
     },
   },
+ {
+  slug: "homeease-essentials",
+  title: "HomeEase Essentials — E-commerce Catalogue",
+  category: "Full-Stack",
+  summary:
+    "A modern product catalogue and e-commerce-style platform for HomeEase Essentials, helping customers browse home products, view categories, and place orders directly through WhatsApp.",
+  problem:
+    "Small businesses often rely on WhatsApp groups and social media posts to sell products, making it difficult for customers to browse items professionally, compare categories, and quickly understand what is available.",
+  solution: [
+    "Built a responsive online catalogue for home products",
+    "Organized products into clear categories such as kitchenware, furniture and electronics",
+    "Added a WhatsApp ordering flow so customers can start an order directly",
+    "Designed a clean business-focused interface suitable for mobile shoppers",
+    "Prepared the structure for future admin product management",
+  ],
+  stack: [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Firebase",
+    "WhatsApp Ordering",
+    "Cloudflare",
+  ],
+  metrics: [
+    { label: "Categories", value: "3+" },
+    { label: "Order Flow", value: "WhatsApp" },
+    { label: "Status", value: "MVP" },
+  ],
+  year: "2026",
+  repo: `${githubBase}/homeease-essentials`,
+  demo: "https://your-homeease-live-link.com",
+  features: [
+    "Product catalogue",
+    "Category-based browsing",
+    "Mobile-first responsive design",
+    "WhatsApp order button",
+    "Product detail sections",
+    "Business contact section",
+    "Clean modern shopping interface",
+  ],
+  challenges: [
+    {
+      title: "Turning a WhatsApp business into a structured catalogue",
+      body: "The main challenge was designing a simple online experience that organizes products clearly while still keeping WhatsApp as the main ordering channel.",
+    },
+    {
+      title: "Making the shopping flow mobile friendly",
+      body: "The interface was designed around mobile users because most customers discover and order products through their phones.",
+    },
+    {
+      title: "Preparing for future product management",
+      body: "The project structure leaves room for adding an admin dashboard, inventory controls and product upload features later.",
+    },
+  ],
+  results: [
+    "Created a professional online presence for HomeEase Essentials",
+    "Made products easier to browse by category",
+    "Improved the customer order flow through WhatsApp",
+    "Built a strong full-stack business project for portfolio presentation",
+  ],
+  architecture: {
+    nodes: [
+      "React UI",
+      "Product Catalogue",
+      "Category Filters",
+      "Product Details",
+      "WhatsApp Order Flow",
+      "Future Admin Dashboard",
+    ],
+    flow: "Customer visits site → browses categories → views product details → clicks WhatsApp order button → business receives enquiry → future admin dashboard manages products",
+  },
+},
 ];
 
 export const caseStudies = projects;

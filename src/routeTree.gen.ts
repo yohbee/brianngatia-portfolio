@@ -17,6 +17,7 @@ import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CaseStudiesHomeeaseEssentialsRouteImport } from './routes/case-studies.homeease-essentials'
 import { Route as CaseStudiesSlugRouteImport } from './routes/case-studies.$slug'
 
 const ResumeRoute = ResumeRouteImport.update({
@@ -59,6 +60,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesHomeeaseEssentialsRoute =
+  CaseStudiesHomeeaseEssentialsRouteImport.update({
+    id: '/homeease-essentials',
+    path: '/homeease-essentials',
+    getParentRoute: () => CaseStudiesRoute,
+  } as any)
 const CaseStudiesSlugRoute = CaseStudiesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -75,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/case-studies/homeease-essentials': typeof CaseStudiesHomeeaseEssentialsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +94,7 @@ export interface FileRoutesByTo {
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/case-studies/homeease-essentials': typeof CaseStudiesHomeeaseEssentialsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +107,7 @@ export interface FileRoutesById {
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
   '/case-studies/$slug': typeof CaseStudiesSlugRoute
+  '/case-studies/homeease-essentials': typeof CaseStudiesHomeeaseEssentialsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/resume'
     | '/case-studies/$slug'
+    | '/case-studies/homeease-essentials'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +133,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/resume'
     | '/case-studies/$slug'
+    | '/case-studies/homeease-essentials'
   id:
     | '__root__'
     | '/'
@@ -133,6 +145,7 @@ export interface FileRouteTypes {
     | '/projects'
     | '/resume'
     | '/case-studies/$slug'
+    | '/case-studies/homeease-essentials'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-studies/homeease-essentials': {
+      id: '/case-studies/homeease-essentials'
+      path: '/homeease-essentials'
+      fullPath: '/case-studies/homeease-essentials'
+      preLoaderRoute: typeof CaseStudiesHomeeaseEssentialsRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
     '/case-studies/$slug': {
       id: '/case-studies/$slug'
       path: '/$slug'
@@ -216,10 +236,12 @@ declare module '@tanstack/react-router' {
 
 interface CaseStudiesRouteChildren {
   CaseStudiesSlugRoute: typeof CaseStudiesSlugRoute
+  CaseStudiesHomeeaseEssentialsRoute: typeof CaseStudiesHomeeaseEssentialsRoute
 }
 
 const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
   CaseStudiesSlugRoute: CaseStudiesSlugRoute,
+  CaseStudiesHomeeaseEssentialsRoute: CaseStudiesHomeeaseEssentialsRoute,
 }
 
 const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
